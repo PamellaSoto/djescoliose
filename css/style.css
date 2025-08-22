@@ -28,7 +28,7 @@
 	max-width:37.5rem;
 	text-align:left;
 	margin:0 auto;
-	padding:0 1.25rem;
+	padding:0 1.25rem 2rem;
 	box-sizing:border-box;
 }
 .container-left p {
@@ -139,7 +139,7 @@ body {
 }
 .container p {
 	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
+	font-size:var(--scale-0);
 	line-height:1.6;
 }
 
@@ -187,13 +187,14 @@ a:hover {
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,button {
+  position: relative;
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
 	width:18.75rem;             	/* 300px */
  	min-height:3rem;                /* 48px */
   	padding:0.75rem 1rem;         	/* 12px ; 16px */
-  	font-size:1.125rem;           	/* 18px */
+  	font-size:1rem;           	/* 16px */
   	font-weight:700;
 	text-decoration:none;
 	white-space:normal;
@@ -212,6 +213,8 @@ a:hover {
 /* Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .icon {
+  position: absolute;
+  left: 1rem;
 	width:1.25rem;
 	height:1.25rem;
 	margin-right:0.5rem;
@@ -256,7 +259,7 @@ a:hover {
 	outline-offset: 2px;
   }
 :root.theme-dark body {
-	background-color:#121212;
+	background-color:#0D0D0D;
 	color:#ffffff;
 }
 :root.theme-dark a:not(.button) {
