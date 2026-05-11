@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Escoliose </title>
+  <meta name="description" content="DJ e produtor de funk moderno da Baixada Santista. Baile Funk cruzado com Dubstep, Garage e Future Bass.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo texto-xs" aria-label="DJ Escoliose — página inicial">DJ ESCOLIOSE</a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#sobre" class="nav__link texto-xs">Sobre</a></li>
+        <li><a href="#lancamentos" class="nav__link texto-xs">Lançamentos</a></li>
+        <li><a href="#" class="nav__link texto-xs">Eventos</a></li>
+        <li><a href="#" class="nav__link texto-xs">Mídia</a></li>
+        <li><a href="#" class="nav__link texto-xs">Contato</a></li>
+      </ul>
+
+      <div class="nav__social" aria-label="Redes sociais">
+        <a href="https://x.com/djescoliose" class="nav__social-link texto-xs" aria-label="Twitter">TW</a>
+        <a href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ" class="nav__social-link texto-xs" aria-label="Spotify">SP</a>
+        <a href="https://instagram.com/djescoliose" class="nav__social-link texto-xs" aria-label="Instagram">IG</a>
+        <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="nav__social-link texto-xs" aria-label="SoundCloud">SC</a>
+      </div>
+
+      <button class="nav__menu-btn btn btn-primario" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu de navegação">
+    <div class="mobile-menu__overlay"></div>
+    <nav class="mobile-menu__panel">
+      <button class="mobile-menu__close btn btn-secundario" aria-label="Fechar menu">
+        <span>Fechar</span>
+      </button>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#sobre" class="mobile-menu__link titulo-md">Sobre</a></li>
+        <li><a href="#lancamentos" class="mobile-menu__link titulo-md">Lançamentos</a></li>
+        <li><a href="#" class="mobile-menu__link titulo-md">Eventos</a></li>
+        <li><a href="#" class="mobile-menu__link titulo-md">Mídia</a></li>
+        <li><a href="#" class="mobile-menu__link titulo-md">Contato</a></li>
+      </ul>
+      <div class="mobile-menu__social" aria-label="Redes sociais">
+        <a href="https://x.com/djescoliose" class="nav__social-link texto-xs" aria-label="Twitter">TW</a>
+        <a href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ" class="nav__social-link texto-xs" aria-label="Spotify">SP</a>
+        <a href="https://instagram.com/djescoliose" class="nav__social-link texto-xs" aria-label="Instagram">IG</a>
+        <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="nav__social-link texto-xs" aria-label="SoundCloud">SC</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+    <section class="hero" id="inicio" aria-label="DJ Escoliose — Hero">
+      <div class="hero__bg" aria-hidden="true">
+        <img
+          src="./assets/dj_escoliose_fundo.png"
+          alt=""
+          class="hero__bg-img"
+          loading="eager"
+          fetchpriority="high"
+        >
+        <!-- <div class="hero__smoke" aria-hidden="true">
+          <div class="hero__smoke-layer hero__smoke-layer--1"></div>
+          <div class="hero__smoke-layer hero__smoke-layer--2"></div>
+          <div class="hero__smoke-layer hero__smoke-layer--3"></div>
+        </div>
+        <div class="hero__scan" aria-hidden="true"></div> -->
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__titulo-wrap" aria-hidden="true">
+          <h1 class="hero__titulo titulo-2xl">DJ ESCOLIOSE</h1>
+        </div>
+
+        <div class="hero__artista" aria-hidden="true">
+          <img
+            src="./assets/dj_escoliose_baixada_santista.webp"
+            alt="DJ Escoliose performando com máscara"
+            class="hero__artista-img"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+      <div class="hero__actions-overlay">
+        <div class="hero__actions">
+          <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario">
+            <span>Ouvir Agora</span>
+          </a>
+          <a href="#lancamentos" class="btn btn-secundario">
+            <span>Próximos Lançamentos</span>
+          </a>
+        </div>
+      </div>    
+    </section>
+
+    <section class="sobre" id="sobre" aria-label="Sobre DJ Escoliose">
+      <div class="sobre__intro container">
+        <p class="auxiliar">— Sobre</p>
+        <h2 class="sobre__headline titulo-xl">
+          O DJ e Produtor<br>
+          <em>mais biruta</em><br>
+          da Baixada Santista
+        </h2>
+      </div>
+
+      <div class="sobre__corpo container">
+        <div class="sobre__col-texto">
+          <p class="texto-xl sobre__lead">
+            Raízes no EDM clássico de 2012 — na mesma época em que começou a criar intros para
+            youtubers e para si mesmo, nasceu a paixão pela música eletrônica.
+          </p>
+
+          <div class="divisor sobre__divisor"></div>
+
+          <p class="texto-md sobre__paragrafo">
+            Com quase uma década produzindo música desde julho de 2016, DJ Escoliose chegou ao seu
+            projeto atual em meados de 2023, quando começou a transformar o funk brasileiro em algo
+            que ele mesmo ouviria: pesado, sujo e cheio de identidade.
+          </p>
+          <p class="texto-md sobre__paragrafo">
+            Como fã de longa data da bass music e dos sons mais agressivos do EDM —
+            Dubstep, Rawstyle, Tearout, Hard Techno — a ideia era simples e ambiciosa ao mesmo
+            tempo: pegar o ritmo do baile e cruzar com os elementos que sempre o moveram.
+          </p>
+          <p class="texto-md sobre__paragrafo">
+            O resultado é um som que mistura <strong class="neon">Baile Funk</strong>,
+            <strong class="neon">Favela Bass</strong> e <strong class="neon">Ritmada</strong>
+            com Dubstep, Garage e uma pitada de Future Bass — criando o que ele chama de
+            funk moderno, do qual se considera um dos pioneiros.
+          </p>
+
+          <div class="divisor sobre__divisor"></div>
+
+          <p class="texto-md sobre__paragrafo">
+            Em 20 de maio de 2024, lançou sua primeira track: <strong>"OH DESGRAÇADO"</strong>.
+            A faixa rapidamente ganhou tração na cena underground e hoje acumula mais de
+            <strong class="neon">8 mil plays no SoundCloud</strong>, plataforma que continua
+            sendo sua casa principal.
+          </p>
+          <p class="texto-md sobre__paragrafo">
+            Seu set debut aconteceu no evento da coletiva Mechanical na Porta Maldita, em Pinheiros,
+            SP. Desde então, a cena paulistana tem sido o palco principal de sua trajetória —
+            com os olhos já voltados para as casas da sua cidade vizinha, Santos.
+          </p>
+          <p class="texto-md sobre__paragrafo">
+            Além de artista, trabalha profissionalmente como engenheiro de áudio (mix e master) e
+            produtor há mais de 3 anos, levando a mesma seriedade sonora para projetos de outros artistas.
+          </p>
+        </div>
+
+        <aside class="sobre__col-lateral" aria-label="Fotos e referências">
+          <figure class="sobre__foto sobre__foto--principal">
+            <img
+              src="https://placehold.co/520x680/0a0a0a/00f5c8?text=FOTO+ARTISTA"
+              alt="DJ Escoliose em estúdio"
+              loading="eager"
+              width="520"
+              height="680"
+            >
+            <figcaption class="texto-xs">— No estúdio</figcaption>
+          </figure>
+
+          <div class="sobre__refs">
+            <p class="auxiliar">Referências</p>
+            <ul class="sobre__refs-lista texto-sm" aria-label="Artistas referência">
+              <li>Skrillex</li>
+              <li>Space Laces</li>
+              <li>Virtual Riot</li>
+              <li>MUST DIE!</li>
+              <li>DROELOE</li>
+              <li>Leotrix</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- <div class="sobre__shows container">
+        <p class="auxiliar sobre__shows-label">— Shows & Eventos</p>
+        <div class="sobre__shows-grid" role="list" aria-label="Fotos de shows">
+          <figure class="sobre__show-item" role="listitem">
+            <img
+              src="https://placehold.co/480x320/0a0a0a/00f5c8?text=SHOW+01"
+              alt="DJ Escoliose no evento Mechanical — Porta Maldita, SP"
+              loading="lazy"
+              width="480"
+              height="320"
+            >
+            <figcaption class="texto-xs">Mechanical — Porta Maldita, SP</figcaption>
+          </figure>
+          <figure class="sobre__show-item" role="listitem">
+            <img
+              src="https://placehold.co/480x320/0a0a0a/00f5c8?text=SHOW+02"
+              alt="DJ Escoliose em performance"
+              loading="lazy"
+              width="480"
+              height="320"
+            >
+            <figcaption class="texto-xs">Set ao vivo — São Paulo</figcaption>
+          </figure>
+          <figure class="sobre__show-item" role="listitem">
+            <img
+              src="https://placehold.co/480x320/0a0a0a/00f5c8?text=SHOW+03"
+              alt="DJ Escoliose em performance noturna"
+              loading="lazy"
+              width="480"
+              height="320"
+            >
+            <figcaption class="texto-xs">Bass night — underground SP</figcaption>
+          </figure>
+        </div>
+      </div> -->
+
+      <div class="sobre__extra container">
+        <blockquote class="sobre__quote">
+          <p class="titulo-lg">
+            "ESCOLIOSE não é só um nome engraçado — é uma condição real que o DJ carrega
+            com humor e orgulho, como símbolo de uma identidade torta do jeito certo."
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="lancamentos" id="lancamentos" aria-label="Lançamentos e músicas em destaque">
+      <div class="lancamentos__cabecalho container">
+        <h2 class="titulo-xl lancamentos__titulo">Em destaque</h2>
+      </div>
+
+      <div class="lancamentos__grid container" role="list" aria-label="Lista de músicas">
+
+        <article class="track" role="listitem">
+          <a href="https://soundcloud.com/mechanicalcollective/bonde-do-autismo" target="_blank" rel="noopener" class="track__link" aria-label="Ouvir Bonde do Autismo no SoundCloud">
+            <div class="track__thumb" aria-hidden="true">
+              <img
+                src="./assets/bonde_do_autismo_dj_escoliose_jooj.webp"
+                alt="Capa de Bonde do Autismo"
+                loading="lazy"
+                width="480"
+                height="480"
+              >
+              <div class="track__play-overlay" aria-hidden="true">
+                <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="42" height="42">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="track__glow" aria-hidden="true"></div>
+            </div>
+            <div class="track__info">
+              <p class="auxiliar track__plataforma">SoundCloud · Mechanical Collective</p>
+              <h3 class="titulo-md track__nome">Bonde do Autismo</h3>
+              <p class="texto-sm track__genero">Baile Funk · Bass</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="track" role="listitem">
+          <a href="https://soundcloud.com/djescoliose/tudo-puta" target="_blank" rel="noopener" class="track__link" aria-label="Ouvir Tudo Puta no SoundCloud">
+            <div class="track__thumb" aria-hidden="true">
+              <img
+                src="./assets/tudo_puta_dj_escoliose_mc_lindao.webp"
+                alt="Capa de Tudo Puta"
+                loading="lazy"
+                width="480"
+                height="480"
+              >
+              <div class="track__play-overlay" aria-hidden="true">
+                <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="42" height="42">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="track__glow" aria-hidden="true"></div>
+            </div>
+            <div class="track__info">
+              <p class="auxiliar track__plataforma">SoundCloud · DJ Escoliose</p>
+              <h3 class="titulo-md track__nome">Tudo Puta</h3>
+              <p class="texto-sm track__genero">Funk Moderno · Dubstep</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="track" role="listitem">
+          <a href="https://soundcloud.com/mechanicalcollective/bunda" target="_blank" rel="noopener" class="track__link" aria-label="Ouvir Bunda no SoundCloud">
+            <div class="track__thumb" aria-hidden="true">
+              <img
+                src="./assets/sequencia_de_bunda_dj_escoliose_tena_dj_mofo.webp"
+                alt="Capa de Bunda"
+                loading="lazy"
+                width="480"
+                height="480"
+              >
+              <div class="track__play-overlay" aria-hidden="true">
+                <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="36" height="36">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="track__glow" aria-hidden="true"></div>
+            </div>
+            <div class="track__info">
+              <p class="auxiliar track__plataforma">SoundCloud · Mechanical Collective</p>
+              <h3 class="titulo-md track__nome">Bunda</h3>
+              <p class="texto-sm track__genero">Favela Bass · Garage</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="track" role="listitem">
+          <a href="https://soundcloud.com/mechanicalcollective/replay" target="_blank" rel="noopener" class="track__link" aria-label="Ouvir Replay no SoundCloud">
+            <div class="track__thumb" aria-hidden="true">
+              <img
+                src="./assets/replay_dj_escoliose_tena.webp"
+                alt="Capa de Replay"
+                loading="lazy"
+                width="480"
+                height="480"
+              >
+              <div class="track__play-overlay" aria-hidden="true">
+                <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="36" height="36">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="track__glow" aria-hidden="true"></div>
+            </div>
+            <div class="track__info">
+              <p class="auxiliar track__plataforma">SoundCloud · Mechanical Collective</p>
+              <h3 class="titulo-md track__nome">Replay</h3>
+              <p class="texto-sm track__genero">Funk Moderno · Future Bass</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="lancamentos__cta container">
+        <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario">
+          <span>Ver todas no SoundCloud</span>
+        </a>
+      </div>
+    </section>
+    <section>
+      <h2>Contato</h2>
+      <ul>
+        <li>Bookings</li>
+        <li>Parcerias</li>
+        <li>Imprensa</li>
+      </ul>
+      <div>
+        <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario">
+            <span>Instagram</span>
+          </a>
+          <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario">
+            <span>Soundcloud</span>
+          </a>
+          <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario" aria-label="Twitter">
+            <span>Twitter</span>
+          </a>
+          <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario">
+            <span>E-mail booking</span>
+          </a>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
