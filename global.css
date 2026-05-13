@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Pridi:wght@600&family=Roboto:wght@300;400&display=swap');
 
 :root {
   --preto: #000000;
@@ -11,15 +11,16 @@
   --cinza-escuro: #0a0a0a;
   --cinza-medio: #111111;
   --cinza-sutil: #1c1c1c;
-  --cinza-texto: #777777;
+  --cinza-texto: #969696;
   --cinza-borda: rgba(255,255,255,0.08);
 
-  --fonte-titulo: 'DM Serif Display', Georgia, serif;
+  --fonte-h1: 'Montserrat', Arial, sans-serif;
+  --fonte-titulo: 'Pridi', Georgia, serif;
   --fonte-corpo: 'Roboto', Helvetica, sans-serif;
 
   --px-mobile: 1.25rem;
   --px-tablet: 3rem;
-  --px-desktop: 6rem;
+  --px-desktop: 12vw;
 
   --gap-2xs: 0.25rem;
   --gap-xs: 0.5rem;
@@ -47,12 +48,32 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--preto);
   color: var(--branco);
   font-family: var(--fonte-corpo);
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--fonte-h1);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+p,
+li,
+span {
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+}
+
+strong,
+b {
+  font-weight: 400;
 }
 
 img { max-width: 100%; display: block; }
@@ -84,45 +105,31 @@ button { cursor: pointer; }
 }
 
 .titulo-2xl {
+  text-transform: uppercase;
   font-family: var(--fonte-titulo);
   font-size: clamp(3.7rem, 14vw, 11rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 0.88;
   letter-spacing: -0.025em;
   color: var(--branco);
 }
 
-.titulo-xl {
-  font-family: var(--fonte-titulo);
-  font-size: clamp(2.75rem, 7vw, 6rem);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--branco);
-}
-
 .titulo-lg {
+  text-transform: uppercase;
   font-family: var(--fonte-titulo);
   font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.05;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
   color: var(--branco);
 }
 
 .titulo-md {
+  text-transform: uppercase;
   font-family: var(--fonte-titulo);
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 2.5vw, 1.7rem);
+  font-weight: 600;
   line-height: 1.15;
-  color: var(--branco);
-}
-
-.titulo-sm {
-  font-family: var(--fonte-titulo);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 400;
-  line-height: 1.25;
   color: var(--branco);
 }
 
@@ -137,14 +144,14 @@ button { cursor: pointer; }
 .texto-md {
   font-family: var(--fonte-corpo);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.65;
 }
 
 .texto-sm {
   font-family: var(--fonte-corpo);
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.55;
   color: var(--cinza-texto);
 }
@@ -152,7 +159,7 @@ button { cursor: pointer; }
 .texto-xs {
   font-family: var(--fonte-corpo);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cinza-texto);
@@ -161,21 +168,13 @@ button { cursor: pointer; }
 .auxiliar {
   font-family: var(--fonte-corpo);
   font-size: 0.6875rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--neon);
 }
 
 .neon { color: var(--neon); }
-
-.neon-glow {
-  color: var(--neon);
-  text-shadow:
-    0 0 8px var(--neon),
-    0 0 25px rgba(0, 245, 200, 0.6),
-    0 0 55px rgba(0, 245, 200, 0.25);
-}
 
 .btn {
   display: inline-flex;
@@ -193,12 +192,13 @@ button { cursor: pointer; }
   overflow: hidden;
   transition: all var(--transicao);
   white-space: nowrap;
+  
 }
 
 .btn-primario {
-  background-color: #ffffff0d;
   color: var(--neon);
   border: 1px solid var(--neon);
+  background-color: transparent;
   box-shadow: 0 0 18px var(--neon-glow), inset 0 0 18px var(--neon-glow);
 }
 
@@ -233,9 +233,6 @@ button { cursor: pointer; }
   background: rgba(255,255,255,0.04);
   box-shadow: 0 0 25px rgba(255,255,255,0.08);
 }
-
-.divisor {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(0,245,200,0.25), transparent);
+.btn_icon {
+  width: 24px;
 }
