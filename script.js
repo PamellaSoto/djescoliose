@@ -1,9 +1,22 @@
-const nav = document.querySelector(".nav");
-const menuBtn = document.querySelector(".nav__menu-btn");
+// ─── Nav ────────────────────────────────────────────────────────────────────
+
+const nav       = document.querySelector(".nav");
+const menuBtn   = document.querySelector(".nav__menu-btn");
 const mobileMenu = document.querySelector(".mobile-menu");
 const menuClose = document.querySelector(".mobile-menu__close");
 const menuOverlay = document.querySelector(".mobile-menu__overlay");
 const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+
+// ─── Mobile menu ────────────────────────────────────────────────────────────
+
+/** Retorna todos os elementos focáveis dentro do painel do menu. */
+function getFocusableEls() {
+  return Array.from(
+    mobileMenu.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+  );
+}
 
 function abrirMenu() {
   mobileMenu.classList.add("aberto");
@@ -13,126 +26,51 @@ function abrirMenu() {
   menuClose.focus();
 }
 
-function fecharMenu() {
+function fecharMenu({ returnFocus = false } = {}) {
   mobileMenu.classList.remove("aberto");
   mobileMenu.setAttribute("aria-hidden", "true");
   menuBtn.setAttribute("aria-expanded", "false");
   document.body.style.overflow = "";
-  menuBtn.focus();
+  if (returnFocus) menuBtn.focus();
 }
 
 menuBtn?.addEventListener("click", abrirMenu);
-menuClose?.addEventListener("click", fecharMenu);
-menuOverlay?.addEventListener("click", fecharMenu);
+menuClose?.addEventListener("click", () => fecharMenu({ returnFocus: true }));
+menuOverlay?.addEventListener("click", () => fecharMenu());
 
-mobileLinks.forEach((link) => {
-  link.addEventListener("click", fecharMenu);
-});
+mobileLinks.forEach((link) =>
+  link.addEventListener("click", () => fecharMenu({ returnFocus: false }))
+);
 
+// Fechar com Escape + trap de foco
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && mobileMenu.classList.contains("aberto")) {
-    fecharMenu();
+  if (!mobileMenu.classList.contains("aberto")) return;
+
+  if (e.key === "Escape") {
+    fecharMenu({ returnFocus: true });
+    return;
+  }
+
+  // Trap de foco dentro do menu
+  if (e.key === "Tab") {
+    const focusable = getFocusableEls();
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 });
 
-let lastScroll = 0;
+// ─── Scroll: nav background ─────────────────────────────────────────────────
+
 window.addEventListener(
   "scroll",
-  () => {
-    const y = window.scrollY;
-    if (y > 60) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-    lastScroll = y;
-  },
-  { passive: true },
+  () => nav.classList.toggle("scrolled", window.scrollY > 60),
+  { passive: true }
 );
-
-const lancamentosGrid = document.querySelector(".lancamentos__grid");
-
-if (lancamentosGrid) {
-  const desktopMedia = window.matchMedia("(min-width: 768px)");
-  let isDragging = false;
-  let movedDuringDrag = false;
-  let startX = 0;
-  let startScrollLeft = 0;
-  let suppressClick = false;
-
-  const finishDrag = (pointerId) => {
-    if (!isDragging) return;
-    isDragging = false;
-    lancamentosGrid.classList.remove("is-dragging");
-    if (
-      typeof pointerId === "number" &&
-      lancamentosGrid.hasPointerCapture(pointerId)
-    ) {
-      lancamentosGrid.releasePointerCapture(pointerId);
-    }
-    if (movedDuringDrag) {
-      suppressClick = true;
-      requestAnimationFrame(() => {
-        suppressClick = false;
-      });
-    }
-  };
-
-  const onPointerDown = (e) => {
-    if (!desktopMedia.matches) return;
-    if (e.pointerType === "mouse" && e.button !== 0) return;
-    isDragging = true;
-    movedDuringDrag = false;
-    startX = e.clientX;
-    startScrollLeft = lancamentosGrid.scrollLeft;
-    lancamentosGrid.classList.add("is-dragging");
-    lancamentosGrid.setPointerCapture(e.pointerId);
-  };
-
-  const onPointerMove = (e) => {
-    if (!isDragging || !desktopMedia.matches) return;
-    const deltaX = e.clientX - startX;
-    if (Math.abs(deltaX) > 3) {
-      movedDuringDrag = true;
-    }
-    lancamentosGrid.scrollLeft = startScrollLeft - deltaX;
-    if (movedDuringDrag) {
-      e.preventDefault();
-    }
-  };
-
-  const onPointerUp = (e) => {
-    finishDrag(e.pointerId);
-  };
-
-  const onPointerCancel = (e) => {
-    finishDrag(e.pointerId);
-  };
-
-  const onClickCapture = (e) => {
-    if (!suppressClick) return;
-    e.preventDefault();
-    e.stopPropagation();
-  };
-
-  const onDragStart = (e) => {
-    if (desktopMedia.matches) {
-      e.preventDefault();
-    }
-  };
-
-  lancamentosGrid.addEventListener("pointerdown", onPointerDown);
-  lancamentosGrid.addEventListener("pointermove", onPointerMove);
-  lancamentosGrid.addEventListener("pointerup", onPointerUp);
-  lancamentosGrid.addEventListener("pointercancel", onPointerCancel);
-  lancamentosGrid.addEventListener("click", onClickCapture, true);
-  lancamentosGrid.addEventListener("dragstart", onDragStart);
-
-  desktopMedia.addEventListener("change", (event) => {
-    if (!event.matches) {
-      isDragging = false;
-      movedDuringDrag = false;
-      lancamentosGrid.classList.remove("is-dragging");
-    }
-  });
-}

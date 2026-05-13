@@ -3,205 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DJ Escoliose</title>
+    <title>DJ Escoliose — Funk Moderno da Baixada Santista</title>
     <meta
       name="description"
       content="DJ e produtor de funk moderno da Baixada Santista. Baile Funk cruzado com Dubstep, Garage e Future Bass."
     />
 
+    <meta property="og:title" content="DJ Escoliose" />
+    <meta property="og:description" content="DJ e produtor de funk moderno da Baixada Santista." />
+    <meta property="og:type" content="website" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&family=Pridi:wght@200;300;400;500;600;700&family=Rakkas&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- ── Navegação principal ─────────────────────────────────────────── -->
     <nav class="nav" role="navigation" aria-label="Navegação principal">
       <div class="nav__inner container">
-        <a
-          href="/"
-          class="nav__logo texto-xs"
-          aria-label="DJ Escoliose — página inicial"
-          >DJ ESCOLIOSE</a
-        >
+        <a href="/" class="nav__logo texto-xs" aria-label="DJ Escoliose — página inicial">
+          DJ ESCOLIOSE
+        </a>
 
         <ul class="nav__links" role="list">
-          <li><a href="#sobre" class="nav__link texto-xs">Sobre</a></li>
-          <li>
-            <a href="#lancamentos" class="nav__link texto-xs">Lançamentos</a>
-          </li>
-          <li><a href="#contato" class="nav__link texto-xs">Contato</a></li>
+          <li><a href="#sobre"       class="nav__link texto-xs">Sobre</a></li>
+          <li><a href="#lancamentos" class="nav__link texto-xs">Lançamentos</a></li>
+          <li><a href="#contato"     class="nav__link texto-xs">Contato</a></li>
         </ul>
 
         <div class="nav__social" aria-label="Redes sociais">
-          <a
-            href="https://x.com/djescoliose"
-            class="nav__social-link texto-xs"
-            aria-label="Twitter"
-            >TW</a
-          >
-          <a
-            href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ"
-            class="nav__social-link texto-xs"
-            aria-label="Spotify"
-            >SP</a
-          >
-          <a
-            href="https://instagram.com/djescoliose"
-            class="nav__social-link texto-xs"
-            aria-label="Instagram"
-            >IG</a
-          >
-          <a
-            href="https://soundcloud.com/djescoliose"
-            target="_blank"
-            rel="noopener"
-            class="nav__social-link texto-xs"
-            aria-label="SoundCloud"
-            >SC</a
-          >
+          <a href="https://x.com/djescoliose"          class="nav__social-link texto-xs" aria-label="Twitter / X">TW</a>
+          <a href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ"
+             class="nav__social-link texto-xs" aria-label="Spotify" target="_blank" rel="noopener">SP</a>
+          <a href="https://instagram.com/djescoliose"  class="nav__social-link texto-xs" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://soundcloud.com/djescoliose" class="nav__social-link texto-xs" aria-label="SoundCloud" target="_blank" rel="noopener">SC</a>
         </div>
 
         <button
           class="nav__menu-btn btn btn-primario"
-          aria-label="Abrir menu"
+          aria-label="Abrir menu de navegação"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          <span>Menu</span>
+          <span aria-hidden="true">Menu</span>
         </button>
       </div>
     </nav>
 
+    <!-- ── Menu mobile ──────────────────────────────────────────────────── -->
     <div
       class="mobile-menu"
       id="mobile-menu"
-      aria-hidden="true"
       role="dialog"
+      aria-modal="true"
       aria-label="Menu de navegação"
+      aria-hidden="true"
     >
-      <div class="mobile-menu__overlay"></div>
-      <nav class="mobile-menu__panel">
+      <div class="mobile-menu__overlay" aria-hidden="true"></div>
+
+      <nav class="mobile-menu__panel" aria-label="Links de navegação">
         <button
           class="mobile-menu__close btn btn-secundario"
-          aria-label="Fechar menu"
+          aria-label="Fechar menu de navegação"
         >
-          <span>Fechar</span>
+          <span aria-hidden="true">Fechar</span>
         </button>
+
         <ul class="mobile-menu__links" role="list">
-          <li>
-            <a href="#sobre" class="mobile-menu__link titulo-md">Sobre</a>
-          </li>
-          <li>
-            <a href="#lancamentos" class="mobile-menu__link titulo-md"
-              >Lançamentos</a
-            >
-          </li>
-          <li>
-            <a href="#contato" class="mobile-menu__link titulo-md">Contato</a>
-          </li>
+          <li><a href="#sobre"       class="mobile-menu__link titulo-md">Sobre</a></li>
+          <li><a href="#lancamentos" class="mobile-menu__link titulo-md">Lançamentos</a></li>
+          <li><a href="#contato"     class="mobile-menu__link titulo-md">Contato</a></li>
         </ul>
+
         <div class="mobile-menu__social" aria-label="Redes sociais">
-          <a
-            href="https://x.com/djescoliose"
-            class="nav__social-link texto-xs"
-            aria-label="Twitter"
-            >TW</a
-          >
-          <a
-            href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ"
-            class="nav__social-link texto-xs"
-            aria-label="Spotify"
-            >SP</a
-          >
-          <a
-            href="https://instagram.com/djescoliose"
-            class="nav__social-link texto-xs"
-            aria-label="Instagram"
-            >IG</a
-          >
-          <a
-            href="https://soundcloud.com/djescoliose"
-            target="_blank"
-            rel="noopener"
-            class="nav__social-link texto-xs"
-            aria-label="SoundCloud"
-            >SC</a
-          >
+          <a href="https://x.com/djescoliose"          class="nav__social-link texto-xs" aria-label="Twitter / X">TW</a>
+          <a href="https://open.spotify.com/intl-pt/artist/1CHyqbLCORKxfhcNqEiguk?si=M6FfU5L5S8-YTeRgNHsVEQ"
+             class="nav__social-link texto-xs" aria-label="Spotify" target="_blank" rel="noopener">SP</a>
+          <a href="https://instagram.com/djescoliose"  class="nav__social-link texto-xs" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://soundcloud.com/djescoliose" class="nav__social-link texto-xs" aria-label="SoundCloud" target="_blank" rel="noopener">SC</a>
         </div>
       </nav>
     </div>
 
-    <main>
-      <section class="hero" id="inicio" aria-label="DJ Escoliose — Hero">
-        <div class="hero__bg" aria-hidden="true">
-          <img
-            src="./assets/dj_escoliose_fundo.png"
-            alt=""
-            class="hero__bg-img"
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
+    <main id="conteudo-principal">
+
+      <!-- ── Hero ───────────────────────────────────────────────────────── -->
+      <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+        <img
+          src="./assets/dj_escoliose_fundo.png"
+          alt=""
+          class="hero__bg hero__bg-img"
+          loading="eager"
+          aria-hidden="true"
+          fetchpriority="high"
+        />
 
         <div class="hero__content container">
-          <div class="hero__titulo-wrap" aria-hidden="true">
-            <h1 class="hero__titulo titulo-2xl">DJ ESCOLIOSE</h1>
-          </div>
-
-          <div class="hero__artista" aria-hidden="true">
-            <img
-              src="./assets/dj_escoliose_baixada_santista.webp"
-              alt="DJ Escoliose performando com máscara"
-              class="hero__artista-img"
-              loading="eager"
-              fetchpriority="high"
-            />
-          </div>
+          <h1 id="hero-titulo" class="hero__titulo titulo-2xl">DJ ESCOLIOSE</h1>
+          <img
+            src="./assets/dj_escoliose_baixada_santista.webp"
+            alt=""
+            class="hero__artista"
+            loading="eager"
+            fetchpriority="high"
+            width="520"
+            height="720"
+          />
         </div>
-        <div class="hero__actions-overlay">
-          <div class="hero__actions">
-            <a
-              href="https://soundcloud.com/djescoliose"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-primario"
-            >
-              <span>Ouvir Agora</span>
-            </a>
-            <a href="#lancamentos" class="btn btn-secundario">
-              <span>Próximos Lançamentos</span>
-            </a>
-          </div>
+        <div class="hero__actions">
+          <a
+            href="https://soundcloud.com/djescoliose"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primario"
+          >
+            <span>Ouvir Agora</span>
+          </a>
+          <a href="#lancamentos" class="btn btn-secundario">
+            <span>Lançamentos</span>
+          </a>
         </div>
       </section>
 
-      <section class="sobre" id="sobre" aria-label="Sobre DJ Escoliose">
+      <!-- ── Sobre ───────────────────────────────────────────────────────── -->
+      <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
         <div class="sobre__corpo container">
+
           <div class="sobre__col-texto">
-            <h2 class="titulo-lg sobre__headline">
+            <h2 id="sobre-titulo" class="titulo-lg sobre__headline">
               O DJ e Produtor mais biruta da Baixada Santista
             </h2>
+
             <p class="texto-xl sobre__lead">
               Raízes no EDM clássico de 2012 — na mesma época em que começou a
               criar intros para youtubers e para si mesmo, nasceu a paixão pela
               música eletrônica.
             </p>
+
             <p class="texto-md sobre__paragrafo">
               Com quase uma década produzindo música desde julho de 2016, DJ
               Escoliose chegou ao seu projeto atual em meados de 2023, quando
               começou a transformar o funk brasileiro em algo que ele mesmo
               ouviria: pesado, sujo e cheio de identidade.
             </p>
+
             <p class="texto-md sobre__paragrafo">
               Como fã de longa data da bass music e dos sons mais agressivos do
               EDM — Dubstep, Rawstyle, Tearout, Hard Techno — a ideia era
               simples e ambiciosa ao mesmo tempo: pegar o ritmo do baile e
               cruzar com os elementos que sempre o moveram.
             </p>
+
             <p class="texto-md sobre__paragrafo">
               O resultado é um som que mistura
               <strong class="neon">Baile Funk</strong>,
@@ -210,6 +168,7 @@
               com Dubstep, Garage e uma pitada de Future Bass — criando o que
               ele chama de funk moderno, do qual se considera um dos pioneiros.
             </p>
+
             <p class="texto-md sobre__paragrafo">
               Em 20 de maio de 2024, lançou sua primeira track:
               <strong>"OH DESGRAÇADO"</strong>. A faixa rapidamente ganhou
@@ -217,68 +176,66 @@
               <strong class="neon">8 mil plays no SoundCloud</strong>,
               plataforma que continua sendo sua casa principal.
             </p>
+
             <figure class="sobre__foto sobre__foto--secundaria">
               <img
                 src="./assets/dj_escoliose_mechanical_evento_porta_maldita_sobre.png"
-                alt="DJ Escoliose no show da Mechanical Collective"
+                alt="DJ Escoliose se apresentando no evento da Mechanical Collective na Porta Maldita, Pinheiros"
                 loading="lazy"
                 draggable="false"
               />
               <figcaption class="texto-xs">
-                DJ Escoliose no show da Mechanical Collective
+                DJ Escoliose no show da Mechanical Collective — Porta Maldita, Pinheiros
               </figcaption>
             </figure>
+
             <p class="texto-md sobre__paragrafo">
               Seu set debut aconteceu no evento da coletiva Mechanical na Porta
               Maldita, em Pinheiros, SP. Desde então, a cena paulistana tem sido
               o palco principal de sua trajetória — com os olhos já voltados
               para as casas da sua cidade vizinha, Santos.
             </p>
+
             <p class="texto-md sobre__paragrafo">
               Além de artista, trabalha profissionalmente como engenheiro de
               áudio (mix e master) e produtor há mais de 3 anos, levando a mesma
               seriedade sonora para projetos de outros artistas.
             </p>
 
-            <div class="sobre__stats">
+            <dl class="sobre__stats" aria-label="Estatísticas do artista">
               <div class="sobre__stats-item">
-                <h3>300+</h3>
-                <p class="auxiliar texto-sm">seguidores</p>
+                <dt class="auxiliar texto-sm">Seguidores</dt>
+                <dd class="sobre__stats-numero">300+</dd>
               </div>
-
               <div class="sobre__stats-item">
-                <h3>68k+</h3>
-                <p class="auxiliar texto-sm">plays total</p>
+                <dt class="auxiliar texto-sm">Plays total</dt>
+                <dd class="sobre__stats-numero">68k+</dd>
               </div>
-
               <div class="sobre__stats-item">
-                <h3>3</h3>
-                <p class="auxiliar texto-sm">anos de carreira</p>
+                <dt class="auxiliar texto-sm">Anos de carreira</dt>
+                <dd class="sobre__stats-numero">3</dd>
               </div>
-            </div>
+            </dl>
           </div>
 
-          <aside class="sobre__col-lateral" aria-label="Fotos e referências">
+          <aside class="sobre__col-lateral" aria-label="Fotos do artista e referências musicais">
             <figure class="sobre__foto sobre__foto--principal">
               <img
                 src="./assets/dj_escoliose_mechanical_evento_sobre.webp"
-                alt="DJ Escoliose no show da Mechanical Collective"
+                alt="DJ Escoliose com máscara no palco durante show da Mechanical Collective"
                 loading="lazy"
                 draggable="false"
                 width="520"
                 height="680"
               />
               <figcaption class="texto-xs">
-                DJ Escoliose no show da Mechanical Collective
+                DJ Escoliose — show da Mechanical Collective
               </figcaption>
             </figure>
 
             <div class="sobre__refs">
-              <p class="auxiliar">Referências</p>
-              <ul
-                class="sobre__refs-lista texto-sm"
-                aria-label="Artistas referência"
-              >
+              <p class="auxiliar" id="refs-label">Referências</p>
+              <ul class="sobre__refs-lista texto-sm" aria-labelledby="refs-label">
                 <li class="auxiliar">Skrillex</li>
                 <li class="auxiliar">Space Laces</li>
                 <li class="auxiliar">Virtual Riot</li>
@@ -289,9 +246,10 @@
             </div>
           </aside>
         </div>
+
         <img
           src="./assets/dj_escoliose_esqueleto.webp"
-          alt="DJ ESCOLIOSE — fundo da seção"
+          alt=""
           class="sobre__bg"
           loading="lazy"
           aria-hidden="true"
@@ -299,219 +257,186 @@
         />
       </section>
 
-      <section
-        class="lancamentos"
-        id="lancamentos"
-        aria-label="Lançamentos e músicas em destaque"
-      >
+      <!-- ── Lançamentos ─────────────────────────────────────────────────── -->
+      <section class="lancamentos" id="lancamentos" aria-labelledby="lancamentos-titulo">
         <div class="lancamentos__conteudo container">
+
           <div class="lancamentos__cabecalho">
-            <h2 class="titulo-lg lancamentos__titulo">últimos lançamentos</h2>
+            <h2 id="lancamentos-titulo" class="titulo-lg lancamentos__titulo">
+              Últimos lançamentos
+            </h2>
+
             <div>
-              <p class="lancamentos__links-titulo">Ouça mais no</p>
-              <div class="lancamentos__links">
+              <p class="lancamentos__links-titulo texto-xs" id="plataformas-label">
+                Ouça mais no
+              </p>
+              <div class="lancamentos__links" aria-labelledby="plataformas-label" role="list">
                 <a
-                  href="https://open.spotify.com/artist/1K40d7z9a5V5b8v9c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z9"
+                  href="https://open.spotify.com/artist/1CHyqbLCORKxfhcNqEiguk"
                   target="_blank"
                   rel="noopener"
+                  aria-label="Ouça no Spotify"
+                  role="listitem"
                 >
-                  <img
-                    src="./assets/spotify_icon.svg"
-                    alt="DJ ESCOLIOSE — fundo da seção de lançamentos"
-                    class="btn_icon"
-                    loading="lazy"
-                    aria-hidden="true"
-                    draggable="false"
-                  />
+                  <img src="./assets/spotify_icon.svg"   alt="Spotify"   class="btn_icon" loading="lazy" draggable="false" width="24" height="24" />
                 </a>
                 <a
                   href="https://soundcloud.com/djescoliose"
                   target="_blank"
                   rel="noopener"
+                  aria-label="Ouça no SoundCloud"
+                  role="listitem"
                 >
-                  <img
-                    src="./assets/soundcloud_icon.svg"
-                    alt="DJ ESCOLIOSE — fundo da seção de lançamentos"
-                    class="btn_icon"
-                    loading="lazy"
-                    aria-hidden="true"
-                    draggable="false"
-                  />
+                  <img src="./assets/soundcloud_icon.svg" alt="SoundCloud" class="btn_icon" loading="lazy" draggable="false" width="24" height="24" />
                 </a>
                 <a
                   href="https://djescoliose.bandcamp.com"
                   target="_blank"
                   rel="noopener"
+                  aria-label="Ouça no Bandcamp"
+                  role="listitem"
                 >
-                  <img
-                    src="./assets/bandcamp_icon.svg"
-                    alt="DJ ESCOLIOSE — fundo da seção de lançamentos"
-                    class="btn_icon"
-                    loading="lazy"
-                    aria-hidden="true"
-                    draggable="false"
-                  />
+                  <img src="./assets/bandcamp_icon.svg"  alt="Bandcamp"  class="btn_icon" loading="lazy" draggable="false" width="24" height="24" />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
+          <!-- aria-label no grid já descreve o propósito; role="list" + role="listitem" garantem semântica correta -->
+          <ul
             class="lancamentos__grid"
-            role="list"
-            aria-label="Lista de músicas"
+            aria-label="Lista de músicas — arraste para navegar"
           >
-            <article class="track" role="listitem">
+            <li class="track">
               <a
                 href="https://soundcloud.com/mechanicalcollective/bonde-do-autismo"
                 target="_blank"
                 rel="noopener"
                 class="track__link"
-                aria-label="Ouvir Bonde do Autismo no SoundCloud"
+                aria-label="Ouvir Bonde do Autismo (feat. jooj) no SoundCloud"
               >
                 <div class="track__thumb" aria-hidden="true">
                   <img
                     src="./assets/bonde_do_autismo_dj_escoliose_jooj.webp"
-                    alt="Capa de Bonde do Autismo"
+                    alt=""
                     loading="lazy"
                     width="480"
                     height="480"
                   />
-                  <div class="track__play-overlay" aria-hidden="true">
-                    <svg
-                      class="track__play-icon"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      width="42"
-                      height="42"
-                    >
+                  <div class="track__play-overlay">
+                    <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="42" height="42" focusable="false">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <div class="track__glow" aria-hidden="true"></div>
+                  <div class="track__glow"></div>
                 </div>
                 <div class="track__info">
-                  <h3 class="titulo-md track__nome">Bonde do Autismo</h3>
-                  <p class="auxiliar track__feat">ft. jooj</p>
+                  <span class="titulo-md track__nome">Bonde do Autismo</span>
+                  <span class="auxiliar track__feat">ft. jooj</span>
                 </div>
               </a>
-            </article>
-            <article class="track" role="listitem">
+            </li>
+
+            <li class="track">
               <a
                 href="https://soundcloud.com/djescoliose/tudo-puta"
                 target="_blank"
                 rel="noopener"
                 class="track__link"
-                aria-label="Ouvir Tudo Puta no SoundCloud"
+                aria-label="Ouvir Tudo Puta (feat. mc lindao) no SoundCloud"
               >
                 <div class="track__thumb" aria-hidden="true">
                   <img
                     src="./assets/tudo_puta_dj_escoliose_mc_lindao.webp"
-                    alt="Capa de Tudo Puta"
+                    alt=""
                     loading="lazy"
                     width="480"
                     height="480"
                   />
-                  <div class="track__play-overlay" aria-hidden="true">
-                    <svg
-                      class="track__play-icon"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      width="42"
-                      height="42"
-                    >
+                  <div class="track__play-overlay">
+                    <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="42" height="42" focusable="false">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <div class="track__glow" aria-hidden="true"></div>
+                  <div class="track__glow"></div>
                 </div>
                 <div class="track__info">
-                  <h3 class="titulo-md track__nome">Tudo Puta</h3>
-                  <p class="auxiliar track__feat">ft. mc lindao</p>
+                  <span class="titulo-md track__nome">Tudo Puta</span>
+                  <span class="auxiliar track__feat">ft. mc lindao</span>
                 </div>
               </a>
-            </article>
-            <article class="track" role="listitem">
+            </li>
+
+            <li class="track">
               <a
                 href="https://soundcloud.com/mechanicalcollective/bunda"
                 target="_blank"
                 rel="noopener"
                 class="track__link"
-                aria-label="Ouvir Bunda no SoundCloud"
+                aria-label="Ouvir Bunda (feat. Tena e DJ Mofo) no SoundCloud"
               >
                 <div class="track__thumb" aria-hidden="true">
                   <img
                     src="./assets/sequencia_de_bunda_dj_escoliose_tena_dj_mofo.webp"
-                    alt="Capa de Bunda"
+                    alt=""
                     loading="lazy"
                     width="480"
                     height="480"
                   />
-                  <div class="track__play-overlay" aria-hidden="true">
-                    <svg
-                      class="track__play-icon"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      width="36"
-                      height="36"
-                    >
+                  <div class="track__play-overlay">
+                    <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="36" height="36" focusable="false">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <div class="track__glow" aria-hidden="true"></div>
+                  <div class="track__glow"></div>
                 </div>
                 <div class="track__info">
-                  <h3 class="titulo-md track__nome">Bunda</h3>
-                  <p class="auxiliar track__feat">ft. tena & dj mofo</p>
+                  <span class="titulo-md track__nome">Bunda</span>
+                  <span class="auxiliar track__feat">ft. tena &amp; dj mofo</span>
                 </div>
               </a>
-            </article>
-            <article class="track" role="listitem">
+            </li>
+
+            <li class="track">
               <a
                 href="https://soundcloud.com/mechanicalcollective/replay"
                 target="_blank"
                 rel="noopener"
                 class="track__link"
-                aria-label="Ouvir Replay no SoundCloud"
+                aria-label="Ouvir Replay (feat. Tena) no SoundCloud"
               >
                 <div class="track__thumb" aria-hidden="true">
                   <img
                     src="./assets/replay_dj_escoliose_tena.webp"
-                    alt="Capa de Replay"
+                    alt=""
                     loading="lazy"
                     width="480"
                     height="480"
                   />
-                  <div class="track__play-overlay" aria-hidden="true">
-                    <svg
-                      class="track__play-icon"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      width="36"
-                      height="36"
-                    >
+                  <div class="track__play-overlay">
+                    <svg class="track__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="36" height="36" focusable="false">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <div class="track__glow" aria-hidden="true"></div>
+                  <div class="track__glow"></div>
                 </div>
                 <div class="track__info">
-                  <h3 class="titulo-md track__nome">Replay</h3>
-                  <p class="auxiliar track__feat">ft. tena</p>
+                  <span class="titulo-md track__nome">Replay</span>
+                  <span class="auxiliar track__feat">ft. tena</span>
                 </div>
               </a>
-            </article>
-          </div>
+            </li>
+          </ul>
+
         </div>
       </section>
+
     </main>
-    <footer class="contato" id="contato" aria-label="Contato e bookings">
+
+    <!-- ── Footer / Contato ───────────────────────────────────────────────── -->
+    <footer class="contato" id="contato" aria-labelledby="contato-titulo">
       <div class="contato__inner container">
-        <h2 class="titulo-lg contato__titulo">Contato</h2>
+        <h2 id="contato-titulo" class="titulo-lg contato__titulo">Contato</h2>
 
         <ul class="contato__lista" aria-label="Tipos de atendimento">
           <li class="auxiliar">Bookings</li>
@@ -519,33 +444,19 @@
           <li class="auxiliar">Imprensa</li>
         </ul>
 
-        <div class="contato__acoes" aria-label="Links de contato">
-          <a
-            href="https://instagram.com/djescoliose"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-primario"
-          >
-            <span>Instagram</span>
-          </a>
-          <a
-            href="https://soundcloud.com/djescoliose"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-primario"
-          >
-            <span>SoundCloud</span>
-          </a>
-          <a href="mailto:booking@djescoliose.site" class="btn btn-primario">
-            <span>E-mail booking</span>
-          </a>
+        <div class="contato__acoes" aria-label="Canais de contato">
+          <a href="https://instagram.com/djescoliose"  target="_blank" rel="noopener" class="btn btn-primario"><span>Instagram</span></a>
+          <a href="https://soundcloud.com/djescoliose" target="_blank" rel="noopener" class="btn btn-primario"><span>SoundCloud</span></a>
+          <a href="mailto:djescoliose@gmail.com"    class="btn btn-primario"><span>E-mail booking</span></a>
         </div>
       </div>
+
       <div class="contato__copyright">
-        <p>2026 © DJESCOLIOSE. Todos os direitos reservados</p>
-        <p>Desenvolvido por novaweb.digital</p>
+        <p><small>2026 © DJESCOLIOSE. Todos os direitos reservados</small></p>
+        <p><small>Desenvolvido por <a href="https://novaweb.digital" target="_blank" rel="noopener">novaweb.digital</a></small></p>
       </div>
     </footer>
+
     <img
       src="./assets/dj_escoliose_fundo_footer.webp"
       alt=""
@@ -554,6 +465,7 @@
       aria-hidden="true"
       draggable="false"
     />
+
     <script src="script.js" defer></script>
   </body>
 </html>

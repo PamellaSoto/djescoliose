@@ -1,41 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Pridi:wght@600&family=Roboto:wght@300;400&display=swap');
+/* ─────────────────────────────────────────────────────────────────────────────
+   global.css — tokens, reset, utilitários tipográficos, botões
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&display=swap');
+
+/* ── Tokens ────────────────────────────────────────────────────────────────── */
 
 :root {
-  --preto: #000000;
-  --branco: #ffffff;
-  --neon: #00f5c8;
-  --neon-dim: #00c9a7;
-  --neon-dark: #004d3f;
-  --neon-glow: rgba(0, 245, 200, 0.12);
+  /* Paleta */
+  --preto:           #000000;
+  --branco:          #ffffff;
+  --neon:            #00f5c8;
+  --neon-dim:        #00c9a7;
+  --neon-dark:       #004d3f;
+  --neon-glow:       rgba(0, 245, 200, 0.12);
   --neon-glow-forte: rgba(0, 245, 200, 0.35);
+
   --cinza-escuro: #0a0a0a;
-  --cinza-medio: #111111;
-  --cinza-sutil: #1c1c1c;
-  --cinza-texto: #969696;
-  --cinza-borda: rgba(255,255,255,0.08);
+  --cinza-medio:  #111111;
+  --cinza-sutil:  #1c1c1c;
+  --cinza-texto:  #969696;
+  --cinza-borda:  rgba(255, 255, 255, 0.08);
 
-  --fonte-h1: 'Montserrat', Arial, sans-serif;
-  --fonte-titulo: 'Pridi', Georgia, serif;
-  --fonte-corpo: 'Roboto', Helvetica, sans-serif;
+  /* Tipografia */
+  --fonte-titulo: 'Pridi',  Georgia, serif;
+  --fonte-corpo:  'Roboto', Helvetica, sans-serif;
 
-  --px-mobile: 1.25rem;
-  --px-tablet: 3rem;
+  /* Layout */
+  --px-mobile:  1.25rem;
+  --px-tablet:  3rem;
   --px-desktop: 12vw;
 
+  /* Espaçamento */
   --gap-2xs: 0.25rem;
-  --gap-xs: 0.5rem;
-  --gap-sm: 1rem;
-  --gap-md: 1.5rem;
-  --gap-lg: 2.5rem;
-  --gap-xl: 4rem;
+  --gap-xs:  0.5rem;
+  --gap-sm:  1rem;
+  --gap-md:  1.5rem;
+  --gap-lg:  2.5rem;
+  --gap-xl:  4rem;
   --gap-2xl: 7rem;
   --gap-3xl: 12rem;
 
-  --transicao: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Animações */
+  --transicao:       0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --transicao-rapida: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*, *::before, *::after {
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -45,6 +60,21 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respeita a preferência do sistema por animações reduzidas */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -58,78 +88,94 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: var(--fonte-h1);
-  font-weight: 800;
-  text-transform: uppercase;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-p,
-li,
-span {
-  font-family: var(--fonte-corpo);
-  font-weight: 300;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-strong,
-b {
-  font-weight: 400;
+ul,
+ol {
+  list-style: none;
 }
 
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-ul, ol { list-style: none; }
-button { cursor: pointer; }
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── Skip link (acessibilidade) ────────────────────────────────────────────── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--neon);
+  color: var(--preto);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: top var(--transicao-rapida);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── Container ─────────────────────────────────────────────────────────────── */
 
 .container {
   width: 100%;
-  padding-left: var(--px-mobile);
-  padding-right: var(--px-mobile);
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: var(--px-mobile);
+  margin-inline: auto;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-left: var(--px-tablet);
-    padding-right: var(--px-tablet);
+    padding-inline: var(--px-tablet);
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    padding-left: var(--px-desktop);
-    padding-right: var(--px-desktop);
+    padding-inline: var(--px-desktop);
     max-width: 1600px;
   }
 }
 
+/* ── Escala tipográfica ────────────────────────────────────────────────────── */
+
 .titulo-2xl {
-  text-transform: uppercase;
   font-family: var(--fonte-titulo);
   font-size: clamp(3.7rem, 14vw, 11rem);
   font-weight: 600;
   line-height: 0.88;
   letter-spacing: -0.025em;
+  text-transform: uppercase;
   color: var(--branco);
 }
 
 .titulo-lg {
-  text-transform: uppercase;
   font-family: var(--fonte-titulo);
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--branco);
 }
 
 .titulo-md {
-  text-transform: uppercase;
   font-family: var(--fonte-titulo);
-  font-size: clamp(2rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
   font-weight: 600;
   line-height: 1.15;
+  text-transform: uppercase;
   color: var(--branco);
 }
 
@@ -165,6 +211,7 @@ button { cursor: pointer; }
   color: var(--cinza-texto);
 }
 
+/* Rótulo auxiliar neon — letras pequenas, caps, tracking largo */
 .auxiliar {
   font-family: var(--fonte-corpo);
   font-size: 0.6875rem;
@@ -174,7 +221,10 @@ button { cursor: pointer; }
   color: var(--neon);
 }
 
+/* Cor de ênfase neon */
 .neon { color: var(--neon); }
+
+/* ── Botões ─────────────────────────────────────────────────────────────────  */
 
 .btn {
   display: inline-flex;
@@ -192,9 +242,16 @@ button { cursor: pointer; }
   overflow: hidden;
   transition: all var(--transicao);
   white-space: nowrap;
-  
 }
 
+/* Estado de foco visível para todos os botões e links */
+.btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--neon);
+  outline-offset: 3px;
+}
+
+/* Botão primário — borda neon com fill ao hover */
 .btn-primario {
   color: var(--neon);
   border: 1px solid var(--neon);
@@ -214,25 +271,35 @@ button { cursor: pointer; }
 
 .btn-primario:hover {
   color: var(--preto);
-  box-shadow: 0 0 35px rgba(0,245,200,0.6), 0 0 70px rgba(0,245,200,0.25);
+  box-shadow: 0 0 35px rgba(0, 245, 200, 0.6), 0 0 70px rgba(0, 245, 200, 0.25);
 }
 
-.btn-primario:hover::after { transform: translateX(0); }
+.btn-primario:hover::after {
+  transform: translateX(0);
+}
 
-.btn-primario > * { position: relative; z-index: 1; }
-.btn-primario span { position: relative; z-index: 1; }
+/* Mantém o conteúdo do botão acima do pseudo-elemento de fill */
+.btn-primario > *,
+.btn-primario span {
+  position: relative;
+  z-index: 1;
+}
 
+/* Botão secundário — borda sutil branca */
 .btn-secundario {
   background: transparent;
   color: var(--branco);
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .btn-secundario:hover {
-  border-color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.04);
-  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+/* Ícone de plataforma (Spotify, SoundCloud, Bandcamp) */
 .btn_icon {
   width: 24px;
+  height: 24px;
 }
