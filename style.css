@@ -76,7 +76,9 @@
 .nav__link:hover::after {
   width: 100%;
 }
-
+.active {
+  color: var(--neon);
+}
 /* Links de redes sociais — ocultos em mobile */
 .nav__social {
   display: none;
