@@ -8,7 +8,16 @@
       name="description"
       content="DJ e produtor de funk moderno da Baixada Santista. Baile Funk cruzado com Uptempo, Tearout e uma pitada de Color Bass e Future GarageUptempo, Tearout e uma pitada de Color Bass e Future Garage."
     />
-
+    <style>
+      .sobre {
+        z-index: 10;
+      }
+      @media (min-width: 768px) {
+        .sobre {
+          max-width: 80vw !important;
+        }
+      }
+    </style>
     <meta property="og:title" content="DJ Escoliose" />
     <meta property="og:description" content="DJ e produtor de funk moderno da Baixada Santista." />
     <meta property="og:type" content="website" />
@@ -32,7 +41,7 @@
         </a>
 
         <ul class="nav__links" role="list">
-          <li><a href="/sobre.html"       class="nav__link texto-xs">Sobre</a></li>
+          <li><a href="#sobre"       class="nav__link texto-xs">Sobre</a></li>
           <li><a href="#lancamentos" class="nav__link texto-xs">Lançamentos</a></li>
           <li><a href="#contato"     class="nav__link texto-xs">Contato</a></li>
         </ul>
@@ -92,161 +101,7 @@
     </div>
 
     <main id="conteudo-principal">
-
-      <!-- ── Hero ───────────────────────────────────────────────────────── -->
-      <section class="hero" id="inicio" aria-labelledby="hero-titulo">
-        <img
-          src="./assets/dj_escoliose_fundo.png"
-          alt=""
-          class="hero__bg hero__bg-img"
-          loading="eager"
-          aria-hidden="true"
-          fetchpriority="high"
-        />
-
-        <div class="hero__content container">
-          <h1 id="hero-titulo" class="hero__titulo titulo-2xl">DJ ESCOLIOSE</h1>
-          <img
-            src="./assets/dj_escoliose_baixada_santista.webp"
-            alt=""
-            class="hero__artista"
-            loading="eager"
-            fetchpriority="high"
-            width="520"
-            height="720"
-          />
-        </div>
-        <div class="hero__actions">
-          <a
-            href="https://soundcloud.com/djescoliose"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-primario"
-          >
-            <span>Ouvir Agora</span>
-          </a>
-          <a href="#lancamentos" class="btn btn-secundario">
-            <span>Lançamentos</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- ── Sobre ───────────────────────────────────────────────────────── -->
-      <section class="sobre" aria-labelledby="sobre-titulo">
-        <div class="sobre__corpo container">
-
-          <div class="sobre__col-texto">
-            <h2 id="sobre-titulo" class="titulo-lg sobre__headline">
-              O DJ e Produtor mais biruta da Baixada Santista
-            </h2>
-
-            <p class="texto-xl sobre__lead">
-              Raízes no EDM clássico de 2012 — na mesma época em que começou a
-              criar intros para youtubers e para si mesmo, nasceu a paixão pela
-              música eletrônica.
-            </p>
-
-            <p class="texto-md sobre__paragrafo">
-              Com quase uma década produzindo música desde julho de 2016, DJ
-              Escoliose chegou ao seu projeto atual em meados de 2023, quando
-              começou a transformar o funk brasileiro em algo que ele mesmo
-              ouviria: pesado, sujo e cheio de identidade.
-            </p>
-
-            <p class="texto-md sobre__paragrafo">
-              Como fã de longa data da bass music e dos sons mais agressivos do
-              EDM — Dubstep, Rawstyle, Tearout, Hard Techno — a ideia era
-              simples e ambiciosa ao mesmo tempo: pegar o ritmo do baile e
-              cruzar com os elementos que sempre o moveram.
-            </p>
-
-            <p class="texto-md sobre__paragrafo">
-              O resultado é um som que mistura
-              <strong class="neon">Baile Funk</strong>,
-              <strong class="neon">Favela Bass</strong> e
-              <strong class="neon">Ritmada</strong>
-              com Uptempo, Tearout e uma pitada de Color Bass e Future Garage — criando o que
-              ele chama de funk moderno, do qual se considera um dos pioneiros.
-            </p>
-
-            <p class="texto-md sobre__paragrafo">
-              Em 20 de maio de 2024, lançou sua primeira track:
-              <strong>"OH DESGRAÇADO"</strong>. A faixa rapidamente ganhou
-              tração na cena underground e hoje acumula mais de
-              <strong class="neon">8 mil plays no SoundCloud</strong>,
-              plataforma que continua sendo sua casa principal.
-            </p>
-
-            <figure class="sobre__foto sobre__foto--secundaria">
-              <img
-                src="./assets/dj_escoliose_mechanical_evento_porta_maldita_sobre.png"
-                alt="DJ Escoliose se apresentando no evento da Mechanical Collective na Porta Maldita, Pinheiros"
-                loading="lazy"
-                draggable="false"
-              />
-              <figcaption class="texto-xs">
-                DJ Escoliose no show da Mechanical Collective — Porta Maldita, Pinheiros
-              </figcaption>
-            </figure>
-
-            <p class="texto-md sobre__paragrafo">
-              Seu set debut aconteceu no evento da coletiva Mechanical na Porta
-              Maldita, em Pinheiros, SP. Desde então, a cena paulistana tem sido
-              o palco principal de sua trajetória — com os olhos já voltados
-              para as casas da sua cidade vizinha, Santos.
-            </p>
-
-            <p class="texto-md sobre__paragrafo">
-              Além de artista, trabalha profissionalmente como engenheiro de
-              áudio (mix e master) e produtor há mais de 3 anos, levando a mesma
-              seriedade sonora para projetos de outros artistas.
-            </p>
-
-            <dl class="sobre__stats" aria-label="Estatísticas do artista">
-              <div class="sobre__stats-item">
-                <dt class="auxiliar texto-sm">Seguidores</dt>
-                <dd class="sobre__stats-numero">300+</dd>
-              </div>
-              <div class="sobre__stats-item">
-                <dt class="auxiliar texto-sm">Plays total</dt>
-                <dd class="sobre__stats-numero">68k+</dd>
-              </div>
-              <div class="sobre__stats-item">
-                <dt class="auxiliar texto-sm">Anos de carreira</dt>
-                <dd class="sobre__stats-numero">3</dd>
-              </div>
-            </dl>
-          </div>
-
-          <aside class="sobre__col-lateral" aria-label="Fotos do artista e referências musicais">
-            <figure class="sobre__foto sobre__foto--principal">
-              <img
-                src="./assets/dj_escoliose_mechanical_evento_sobre.webp"
-                alt="DJ Escoliose com máscara no palco durante show da Mechanical Collective"
-                loading="lazy"
-                draggable="false"
-                width="520"
-                height="680"
-              />
-              <figcaption class="texto-xs">
-                DJ Escoliose — show da Mechanical Collective
-              </figcaption>
-            </figure>
-
-            <div class="sobre__refs">
-              <p class="auxiliar" id="refs-label">Referências</p>
-              <ul class="sobre__refs-lista texto-sm" aria-labelledby="refs-label">
-                <li class="auxiliar">Skrillex</li>
-                <li class="auxiliar">Space Laces</li>
-                <li class="auxiliar">Virtual Riot</li>
-                <li class="auxiliar">MUST DIE!</li>
-                <li class="auxiliar">DROELOE</li>
-                <li class="auxiliar">Leotrix</li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-
+      <section class="sobre sobre__col-texto container" id="sobre" aria-labelledby="sobre-titulo">
         <img
           src="./assets/dj_escoliose_esqueleto.webp"
           alt=""
@@ -255,6 +110,57 @@
           aria-hidden="true"
           draggable="false"
         />
+        <h2 id="sobre-titulo" class="titulo-lg sobre__headline">Quem é o DJ Escoliose?</h2>
+
+        <p class="texto-xl sobre__lead">
+          Raízes no EDM clássico de 2012 — na mesma época em que começou a
+          criar intros para youtubers e para si mesmo, nasceu a paixão pela
+          música eletrônica.
+        </p>
+
+        <p class="texto-md sobre__paragrafo">
+          Com quase uma década produzindo música desde julho de 2016, DJ
+          Escoliose chegou ao seu projeto atual em meados de 2023, quando
+          começou a transformar o funk brasileiro em algo que ele mesmo
+          ouviria: pesado, sujo e cheio de identidade.
+        </p>
+
+        <p class="texto-md sobre__paragrafo">
+          Como fã de longa data da bass music e dos sons mais agressivos do
+          EDM — Dubstep, Rawstyle, Tearout, Hard Techno — a ideia era
+          simples e ambiciosa ao mesmo tempo: pegar o ritmo do baile e
+          cruzar com os elementos que sempre o moveram.
+        </p>
+
+        <p class="texto-md sobre__paragrafo">
+          O resultado é um som que mistura
+          <strong class="neon">Baile Funk</strong>,
+          <strong class="neon">Favela Bass</strong> e
+          <strong class="neon">Ritmada</strong>
+          com Uptempo, Tearout e uma pitada de Color Bass e Future Garage — criando o que
+          ele chama de funk moderno, do qual se considera um dos pioneiros.
+        </p>
+
+        <p class="texto-md sobre__paragrafo">
+          Em 20 de maio de 2024, lançou sua primeira track:
+          <strong>"OH DESGRAÇADO"</strong>. A faixa rapidamente ganhou
+          tração na cena underground e hoje acumula mais de
+          <strong class="neon">8 mil plays no SoundCloud</strong>,
+          plataforma que continua sendo sua casa principal.
+        </p>
+ 
+        <p class="texto-md sobre__paragrafo">
+          Seu set debut aconteceu no evento da coletiva Mechanical na Porta
+          Maldita, em Pinheiros, SP. Desde então, a cena paulistana tem sido
+          o palco principal de sua trajetória — com os olhos já voltados
+          para as casas da sua cidade vizinha, Santos.
+        </p>
+
+        <p class="texto-md sobre__paragrafo">
+          Além de artista, trabalha profissionalmente como engenheiro de
+          áudio (mix e master) e produtor há mais de 3 anos, levando a mesma
+          seriedade sonora para projetos de outros artistas.
+        </p>
       </section>
 
       <!-- ── Lançamentos ─────────────────────────────────────────────────── -->
